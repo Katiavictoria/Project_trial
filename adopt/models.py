@@ -13,3 +13,6 @@ class Pet(models.Model):
     age = models.IntegerField('Age')
 
     color = models.CharField('Color', max_length=50, choices=CHOICES)
+
+    def __str__(self):
+        return f'{self.id}: {self.name}'
